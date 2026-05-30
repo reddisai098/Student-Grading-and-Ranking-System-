@@ -58,12 +58,11 @@ void insertstudentdata(vector<student>& studentlist){
     cout<<"enter the name of student"<<endl;
     cin.ignore();
     getline(cin,temp.name);
-    cout<<temp.name<<endl;
     cout<<"enter student id "<<endl;
     cin>>temp.id;
     cout<<"enter student marks in order subject 1 , subject 2 , subject 3"<<endl;
     cin>>temp.sub1>>temp.sub2>>temp.sub3;
-
+    cin.ignore(10000, '\n');
     double x=calculategrade(temp.sub1,temp.sub2,temp.sub3);
 
     if(x>=85.00) temp.grade='A';
@@ -82,7 +81,7 @@ void searchstudent(vector<student>& studentlist){
     for(const auto &student:studentlist){
         if(student.id == temp){
             found=true;
-            cout<<"Name: "<<student.name<<"  Student ID: "<<student.id<<" Marks : "<<student.sub1<<","<<student.sub2<<","<<student.sub3<<" Grade: "<<student.grade<<endl;
+            cout<<"Name: "<<student.name<<"  | Student ID: "<<student.id<<" | Marks : "<<student.sub1<<","<<student.sub2<<","<<student.sub3<<" | Grade: "<<student.grade<<endl;
             break;
         }
     }
