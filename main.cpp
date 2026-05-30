@@ -1,4 +1,8 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <algorithm>
 using namespace std;
 typedef struct{
     string name;
@@ -26,6 +30,12 @@ int main(){
         cout<<"4.exit"<<endl;
         cout<<"enter your choice "<<endl;
         cin>>choice;
+        if (!(cin >> choice)) {
+            cout << "\n[Error] Invalid input! Please enter a number (1-4)." << endl;
+            cin.clear();           
+            cin.ignore(10000, '\n'); 
+            continue;
+        }
         switch (choice)
         {
         case 1:
