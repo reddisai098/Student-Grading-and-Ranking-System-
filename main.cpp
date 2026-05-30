@@ -128,7 +128,6 @@ void saveToFile(const vector<student>& studentlist) {
     }
 
     for (const auto& s : studentlist) {
-        // Write all variables separated by commas
         outFile << s.name << "," 
                 << s.id << "," 
                 << s.sub1 << "," 
